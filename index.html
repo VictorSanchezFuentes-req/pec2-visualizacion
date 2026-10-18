@@ -133,7 +133,38 @@
       section {
         padding: 18px;
       }
+      
     }
+    
+    #bibliografia h3 {
+      margin-top: 32px;
+      margin-bottom: 14px;
+      color: #183153;
+      font-size: 1.15rem;
+    }
+    
+    #bibliografia ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    #bibliografia li {
+      margin-bottom: 18px;
+      padding-left: 25px;
+      text-indent: -25px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+    
+    #bibliografia a {
+      color: #225b9a;
+      text-decoration: underline;
+    }
+    
+    #bibliografia a:hover {
+      color: #123b68;
+    }
+
   </style>
 </head>
 
@@ -152,6 +183,7 @@
   <a href="#heatmap">Heatmap</a>
   <a href="#flowmap">Flow Map</a>
   <a href="#bumpchart">Bump Chart</a>
+  <a href="#bibliografia">Bibliografía</a>
 </nav>
 
 <main>
@@ -159,15 +191,21 @@
   <section>
     <h2>Introducción</h2>
     <p>
+      Este proyecto ha sido realizado por
+      Víctor Sánchez Fuentes para la PEC2
+      de Visualización de Datos del Máster
+      Ingeniería Informática de la uoc.
+    </p>
+    <p>
       Este proyecto presenta tres técnicas de
       visualización de datos aplicadas a conjuntos
       de datos abiertos.
     </p>
     <p>
       El objetivo es explorar las características
-      de cada técnica y demostrar su adecuación
+      de cada técnica y explicar su adecuación
       a diferentes estructuras de datos y
-      objetivos de comunicación.
+      fuerzas y debilidades.
     </p>
     <p>
       Las visualizaciones se han elaborado
@@ -315,6 +353,203 @@
       </a>.
     </p>
   </section>
+
+<section id="bibliografia">
+
+  <p class="tipo">Referencias académicas</p>
+  <h2>Bibliografía y recursos utilizados</h2>
+
+  <p>
+    Para la realización de esta actividad se han
+    utilizado fuentes de datos abiertos,
+    bibliografía especializada en visualización
+    de datos y documentación técnica de R.
+    Se ha utilizado ChatGPT como herramienta de apoyo
+    y debug, especialmente para generar la 
+  </p>
+
+  <h3>1. Fundamentos de visualización de datos</h3>
+
+  <ul>
+    <li>
+      Munzner, T. (2014).
+      <em>Visualization analysis and design</em>.
+      CRC Press.
+      <a href="https://doi.org/10.1201/b17511"
+         target="_blank" rel="noopener noreferrer">
+        https://doi.org/10.1201/b17511
+      </a>.
+      Capítulos 2, "What: Data Abstraction",
+      y 5, "Marks and Channels".
+    </li>
+
+    <li>
+      Schwabish, J. A. (2021).
+      <em>Better data visualizations:
+      A guide for scholars, researchers,
+      and wonks</em>.
+      Columbia University Press.
+      Parte II, capítulos 4-9.
+    </li>
+
+    <li>
+      Wickham, H. (2010).
+      A layered grammar of graphics.
+      <em>Journal of Computational and
+      Graphical Statistics, 19</em>(1), 3-28.
+      <a href="https://doi.org/10.1198/jcgs.2009.07098"
+         target="_blank" rel="noopener noreferrer">
+        https://doi.org/10.1198/jcgs.2009.07098
+      </a>.
+    </li>
+  </ul>
+
+    
+  <h3>2. Fuentes de datos abiertos y cartografía</h3>
+  
+  <p>
+    A continuación se indican los conjuntos de datos
+    empleados, sus organismos responsables y las
+    visualizaciones en las que se han utilizado.
+  </p>
+  
+  <ul>
+  
+    <li>
+      <strong>Heatmap y Bump Chart.</strong><br>
+      Our World in Data. (s. f.).
+      <em>Share of electricity generation from renewables</em>
+      [Conjunto de datos].
+      Global Change Data Lab. Datos procedentes de
+      Ember y otras fuentes, procesados por
+      Our World in Data.<br>
+      <strong>Periodo analizado:</strong> 2010-2025.<br>
+      <strong>Ámbito:</strong> doce países europeos.<br>
+      <strong>Variable:</strong> porcentaje de electricidad
+      generada a partir de fuentes renovables.<br>
+      <strong>Consulta de datos:</strong>
+      <a
+        href="https://ourworldindata.org/grapher/electricity-mix?frequency=annual&amp;metric=share_of_generation&amp;source=renewables&amp;tab=chart"
+        target="_blank"
+        rel="noopener noreferrer">
+        Our World in Data - Electricity mix
+      </a>.<br>
+      <strong>Visualizaciones:</strong>
+      Heatmap (comparación de porcentajes)
+      y Bump Chart (evolución del ranking).
+    </li>
+  
+    <li>
+      <strong>Flow Map - Datos migratorios.</strong><br>
+      Instituto Nacional de Estadística. (s. f.).
+      <em>Inmigraciones procedentes del extranjero
+      por año, sexo, país de procedencia y
+      nacionalidad (española/extranjera).
+      Estadística de Migraciones y Cambios
+      de Residencia</em>
+      [Conjunto de datos, tabla 69690].<br>
+      <strong>Periodo analizado:</strong> 2024.<br>
+      <strong>Variable:</strong> número de inmigraciones
+      hacia España por país de procedencia.<br>
+      <strong>Ficha en el Catálogo Nacional
+      de Datos Abiertos:</strong>
+      <a
+        href="https://datos.gob.es/es/catalogo/ea0042823-inmigraciones-procedentes-del-extranjero-por-ano-sexo-pais-de-procedencia-y-nacionalidad-espanola-extranjera-emcr-identificador-api-69690"
+        target="_blank"
+        rel="noopener noreferrer">
+        datos.gob.es - Tabla 69690 del INE
+      </a>.<br>
+      <strong>Descarga directa del CSV:</strong>
+      <a
+        href="https://www.ine.es/jaxiT3/files/t/csv_bdsc/69690.csv"
+        target="_blank"
+        rel="noopener noreferrer">
+        Archivo CSV del INE
+      </a>.<br>
+      <strong>Visualización:</strong>
+      Flow Map (flujos migratorios hacia España).
+    </li>
+  
+    <li>
+      <strong>Flow Map - Base cartográfica.</strong><br>
+      Natural Earth. (s. f.).
+      <em>Natural Earth: Free vector and
+      raster map data</em>
+      [Datos cartográficos].<br>
+      <strong>Uso:</strong> representación de los
+      límites geográficos de los países europeos.<br>
+      <strong>Consulta:</strong>
+      <a
+        href="https://www.naturalearthdata.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Natural Earth
+      </a>.<br>
+      <strong>Acceso desde R:</strong>
+      paquete rnaturalearth.<br>
+      <strong>Visualización:</strong> Flow Map.
+    </li>
+  
+  </ul>
+
+  <h3>3. Documentación de R y librerías</h3>
+
+  <ul>
+    <li>
+      R Core Team. (2026).
+      <em>R: A language and environment
+      for statistical computing</em>.
+      R Foundation for Statistical Computing.
+      <a href="https://www.r-project.org/"
+         target="_blank" rel="noopener noreferrer">
+        https://www.r-project.org/
+      </a>.
+    </li>
+  </ul>
+
+  <h3>4. Publicación de las visualizaciones</h3>
+
+  <ul>
+    <li>
+      GitHub. (s. f.).
+      <em>GitHub Pages documentation</em>.
+      <a href="https://docs.github.com/en/pages"
+         target="_blank" rel="noopener noreferrer">
+        https://docs.github.com/en/pages
+      </a>.
+      Documentación para la publicación
+      de la página web estática.
+    </li>
+  </ul>
+
+  <h3>5. Notas metodológicas</h3>
+
+  <p>
+    Los datos de electricidad renovable
+    se han utilizado para dos objetivos
+    diferentes: comparar porcentajes
+    mediante un Heatmap y estudiar
+    posiciones relativas mediante
+    un Bump Chart.
+  </p>
+
+  <p>
+    Para el Flow Map se han seleccionado
+    países europeos identificados
+    individualmente en los datos del INE.
+    Las conexiones representan volúmenes
+    estadísticos y no trayectos reales.
+  </p>
+
+  <p>
+    Las visualizaciones se han elaborado
+    con R y se han publicado como imágenes
+    PNG en una página web estática
+    desarrollada con HTML5 y CSS3.
+  </p>
+
+</section>
+
 
 </main>
 
