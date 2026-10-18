@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>PEC 2 | Visualización de datos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #253346;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #183153;
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      color: #dce7f3;
+    }
+
+    nav {
+      background: white;
+      padding: 18px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #183153;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 35px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      color: #183153;
+      margin-top: 0;
+    }
+
+    .tipo {
+      color: #52739b;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    figure {
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      border: 1px solid #e5e9ef;
+      border-radius: 5px;
+    }
+
+    figcaption {
+      font-size: 0.85rem;
+      color: #667085;
+      margin-top: 12px;
+    }
+
+    .fuente {
+      font-size: 0.9rem;
+      color: #596579;
+    }
+
+    .fuente a {
+      color: #225b9a;
+    }
+
+    footer {
+      background: #183153;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>PEC 2 · Visualización de datos</h1>
+  <p>
+    Exploración de tres técnicas de representación
+    visual de información
+  </p>
+  <p>Heatmap · Flow Map · Bump Chart</p>
+</header>
+
+<nav aria-label="Navegación principal">
+  <a href="#heatmap">Heatmap</a>
+  <a href="#flowmap">Flow Map</a>
+  <a href="#bumpchart">Bump Chart</a>
+</nav>
+
+<main>
+
+  <section>
+    <h2>Introducción</h2>
+    <p>
+      Este proyecto presenta tres técnicas de
+      visualización de datos aplicadas a conjuntos
+      de datos abiertos.
+    </p>
+    <p>
+      El objetivo es explorar las características
+      de cada técnica y demostrar su adecuación
+      a diferentes estructuras de datos y
+      objetivos de comunicación.
+    </p>
+    <p>
+      Las visualizaciones se han elaborado
+      utilizando R y diversas librerías de
+      análisis y representación gráfica.
+    </p>
+  </section>
+
+  <section id="heatmap">
+    <p class="tipo">Técnica 1 · Heatmap</p>
+
+    <h2>
+      La transición hacia la electricidad
+      renovable en Europa
+    </h2>
+
+    <p>
+      Este mapa de calor representa la evolución
+      del porcentaje de electricidad renovable
+      en doce países europeos entre 2010 y 2025.
+    </p>
+
+    <figure>
+      <img
+        src="heatmap_renovables_europa.png"
+        alt="Mapa de calor de electricidad renovable
+        en doce países europeos entre 2010 y 2025"
+      >
+      <figcaption>
+        Porcentaje de electricidad renovable
+        por país y año.
+      </figcaption>
+    </figure>
+
+    <p>
+      <strong>Objetivo:</strong>
+      identificar patrones temporales y diferencias
+      entre países mediante la intensidad del color.
+    </p>
+
+    <p class="fuente">
+      Fuente:
+      <a href="https://ourworldindata.org/"
+         target="_blank" rel="noopener noreferrer">
+        Our World in Data
+      </a>.
+    </p>
+  </section>
+
+  <section id="flowmap">
+    <p class="tipo">Técnica 2 · Flow Map</p>
+
+    <h2>
+      Principales flujos migratorios europeos
+      hacia España
+    </h2>
+
+    <p>
+      El mapa representa las inmigraciones hacia
+      España procedentes de diez países europeos
+      identificados individualmente en los datos
+      del INE durante 2024.
+    </p>
+
+    <figure>
+      <img
+        src="flowmap_migraciones_espana_2024.png"
+        alt="Mapa de flujos migratorios desde diez
+        países europeos hacia España en 2024"
+      >
+      <figcaption>
+        El grosor de cada línea representa
+        el volumen de inmigraciones.
+      </figcaption>
+    </figure>
+
+    <p>
+      <strong>Objetivo:</strong>
+      visualizar las conexiones geográficas
+      entre países de procedencia y España,
+      comparando la magnitud de los flujos.
+    </p>
+
+    <p>
+      Las líneas representan relaciones
+      estadísticas, no rutas reales de viaje.
+    </p>
+
+    <p class="fuente">
+      Fuente:
+      <a href="https://www.ine.es/"
+         target="_blank" rel="noopener noreferrer">
+        Instituto Nacional de Estadística
+      </a>.
+      Estadística de Migraciones y Cambios
+      de Residencia.
+    </p>
+  </section>
+
+  <section id="bumpchart">
+    <p class="tipo">Técnica 3 · Bump Chart</p>
+
+    <h2>
+      Cómo cambia el ranking de electricidad
+      renovable en Europa
+    </h2>
+
+    <p>
+      Este gráfico representa la evolución de
+      las posiciones relativas de doce países
+      europeos según su porcentaje de
+      electricidad renovable entre 2010 y 2025.
+    </p>
+
+    <figure>
+      <img
+        src="bumpchart_renovables_europa.png"
+        alt="Gráfico de evolución del ranking
+        de electricidad renovable entre 2010 y 2025"
+      >
+      <figcaption>
+        Evolución de las posiciones relativas
+        entre los doce países seleccionados.
+      </figcaption>
+    </figure>
+
+    <p>
+      <strong>Objetivo:</strong>
+      identificar cambios de liderazgo,
+      ascensos, descensos y estabilidad
+      en las posiciones del ranking.
+    </p>
+
+    <p>
+      Las posiciones son relativas al conjunto
+      de doce países y no representan una
+      clasificación de toda Europa.
+    </p>
+
+    <p class="fuente">
+      Fuente:
+      <a href="https://ourworldindata.org/"
+         target="_blank" rel="noopener noreferrer">
+        Our World in Data
+      </a>.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  PEC 2 · Visualización de datos
+  <p>
+    Proyecto académico · Universitat Oberta
+    de Catalunya
+  </p>
+</footer>
+
+</body>
+</html>
